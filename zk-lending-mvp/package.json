@@ -1,0 +1,53 @@
+{
+  "name": "zk-lending-mvp",
+  "version": "1.0.0",
+  "description": "ZK Lending MVP for Flow EVM with Zero Knowledge proofs",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network flowtestnet",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "node": "hardhat node",
+    "clean": "hardhat clean",
+    "circuit:compile": "node scripts/compile-circuit.js",
+    "circuit:setup": "node scripts/setup-circuit.js",
+    "circuit:export-verifier": "node scripts/export-verifier.js",
+    "circuit:generate-proof": "node scripts/generate-proof.js",
+    "circuit:full-setup": "npm run circuit:compile && npm run circuit:setup && npm run circuit:export-verifier",
+    "circuit:test": "npm run circuit:full-setup && npm run circuit:generate-proof"
+  },
+  "keywords": [
+    "zk",
+    "zero-knowledge",
+    "lending",
+    "defi",
+    "flow",
+    "evm",
+    "circom",
+    "snarkjs"
+  ],
+  "author": "ZK Lending Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@openzeppelin/contracts": "^4.9.3",
+    "@chainlink/contracts": "^0.8.0",
+    "chai": "^4.3.7",
+    "ethereum-waffle": "^4.0.10",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.17.2",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "circomlib": "^2.0.5",
+    "snarkjs": "^0.7.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
