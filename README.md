@@ -10,7 +10,7 @@ A Zero-Knowledge lending protocol MVP built for Flow EVM testnet, featuring priv
 - **Liquidation System**: Automated liquidation of undercollateralized positions
 - **Price Oracle Integration**: Chainlink price feeds for accurate collateral valuation
 
-## 📁 Project Structure
+## 📁 Project Structure =>
 
 ```
 zk-lending-mvp/
